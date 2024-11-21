@@ -4,11 +4,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 colour: a skos:ConceptScheme ;
-    dct:title "Colour Vocabulary"@en, "Farbvokabular"@de ;
+    dct:title "PMs Colour Vocabulary"@en, "PMs Farbvokabular"@de ;
     dct:creator "Hans Dampf"@de ;
-    dct:created "2021-11-02"^^xsd:date ;
+    dct:created "2024-11-21"^^xsd:date ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    skos:hasTopConcept colour:violet, colour:blue .
+    skos:hasTopConcept colour:violet, 
+        colour:blue,
+        colour:yellow .
 
 colour:violet a skos:Concept ;
     skos:prefLabel "Violett"@de, "violet"@en;
@@ -17,4 +19,8 @@ colour:violet a skos:Concept ;
 
 colour:blue a skos:Concept ;
     skos:prefLabel "Blau"@de, "blue"@en ;
+    skos:topConceptOf colour: .
+
+colour:yellow a skos:Concept ;
+    skos:prefLabel "Gelb"@de, "yellow"@en ;
     skos:topConceptOf colour: .
